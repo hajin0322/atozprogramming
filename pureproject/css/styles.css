@@ -1,0 +1,17 @@
+main {
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    padding: 10px 15px;
+    text-align: center;
+}
+input {
+    border: none;
+    text-align: center;
+}
+input:focus {
+    outline: none;
+}
