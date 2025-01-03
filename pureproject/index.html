@@ -1,65 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-		<!--메타 태그는 title, base, link, style, script와 같이 HTML의 특정 목적을 위한 메타데이터 태그에서 다룰 수 없는 다양한 메타데이터를 나타내는 태그-->
-        <meta charset="UTF-8">
-        <!--인코딩과 디코딩 간의 약속(문자 집합): 유니코드, UTF-8, UTF-16, ...-->
-        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-        <title>Calculator</title>
-        <link rel="stylesheet" href="./css/styles.css" (type="/text/css")>
-        
-    </head>
-    <body>
-        <header>
-            <h2>𝑪𝑨𝑳𝑪𝑼𝑳𝑨𝑻𝑶𝑹</h2>
-        </header>
 
-        <main>
-            <table border="1" id="calculator">
-                <tr>
-                    <td colspan="4">
-                        <input type="text" id="display">
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="4" id="result"></td>
-                </tr>
-                <tr>
-                    <td colspan="3" onclick="reset()">AC</td>
-                    <td onclick="enumerate('/')">÷</td>
-                </tr>
-                <tr>
-                    <td onclick="enumerate(7)">7</td>
-                    <td onclick="enumerate(8)">8</td>
-                    <td onclick="enumerate(9)">9</td>
-                    <td onclick="enumerate('*')">×</td>
-                </tr>
-                <tr>
-                    <td onclick="enumerate(4)">4</td>
-                    <td onclick="enumerate(5)">5</td>
-                    <td onclick="enumerate(6)">6</td>
-                    <td onclick="enumerate('-')">-</td>
-                </tr>
-                <tr>
-                    <td onclick="enumerate(1)">1</td>
-                    <td onclick="enumerate(2)">2</td>
-                    <td onclick="enumerate(3)">3</td>
-                    <td onclick="enumerate('+')">+</td>
-                </tr>
-                <tr>
-                    <td colspan="2" onclick="enumerate(0)">0</td>
-                    <td onclick="enumerate('.')">.</td>
-                    <td onclick="calculate()">=</td>
-                </tr>
-            </table>
-        </main>
+<head>
+    <!--메타 태그는 title, base, link, style, script와 같이 HTML의 특정 목적을 위한 메타데이터 태그에서 다룰 수 없는 다양한 메타데이터를 나타내는 태그-->
+    <meta charset="UTF-8">
+    <!--인코딩과 디코딩 간의 약속(문자 집합): 유니코드, UTF-8, UTF-16, ...-->
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./css/styles.css" (type="/text/css" )>
 
-        <p id = 'asd'></p>
+</head>
 
-        <footer>
-            <p>&copy; 2025 CAS. All rights reserved.</p>
-        </footer>
+<body>
+    <header>
+        <h2>𝑪𝑨𝑳𝑪𝑼𝑳𝑨𝑻𝑶𝑹</h2>
+    </header>
 
-        <script src="./js/app.js"></script>
-    </body>
+    <main>
+        <div id="root"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CAS. All rights reserved.</p>
+    </footer>
+
+    <script src="./js/index.js" type="module"></script>
+</body>
+
 </html>
