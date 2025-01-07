@@ -52,7 +52,7 @@ export default class App {
 
     onEnumerate(value) {
         if (isNaN(value) == true) {
-            if (value != '.') {
+            if (value != '.') { // 연산자
                 if (this.state.nonNumberClicked == true) {
                     alert("Next input must be Number! Please enter Number.");
                     return;
@@ -86,7 +86,7 @@ export default class App {
             if (this.state.nonNumberClicked == true) {
                 alert("Last input in the field must be Number! Please enter Number.");
             } else {
-                this.state.result = eval(this.state.currentInput.replace('×', '*').replace('÷', '/'));
+                this.state.result = eval(this.state.currentInput.replace('×', '*').replace('÷', '/')); //evil
             }
         } catch {
             this.state.result = 'ERROR!';
@@ -100,30 +100,3 @@ export default class App {
         this.root.appendChild(this.buttons.render()); // 비효율적인 것 같은데?
     }
 }
-
-
-/*
-        function enumerate(char) {
-            if (isNaN(char) == true) {
-                if (char != '.') {
-                    if (nonNumberClicked == true) {
-                        alert("Next input must be Number! Please enter Number.");
-                        return;
-                    }
-                    dotClicked = false;
-                }
-                if (char == '.') {
-                    if (dotClicked == true) {
-                        alert("Dot is overlapped in a number! Please enter other symbol!");
-                        return;
-                    }
-                    dotClicked = true;
-                }
-                nonNumberClicked = true;
-                }
-                else {
-                    nonNumberClicked = false;
-                }
-            $display.value += char;
-        }
-        */
